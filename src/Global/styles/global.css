@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-800 text-pink-900;
+  @apply bg-base-background font-sans text-base-title;
 }
