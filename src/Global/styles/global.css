@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	@apply m-0 p-0 box-border;
+
+	::-webkit-scrollbar {
+		@apply w-['0.45rem'];
+	}
+
+	::-webkit-scrollbar-track {
+		@apply bg-base-border;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply bg-blue rounded-full;
+	}
+}
+
 body {
-  @apply bg-base-background font-sans text-base-title;
+	@apply bg-base-background font-sans text-base-text;
+}
+
+body,
+input,
+textarea,
+button {
+	@apply font-normal text-base font-sans leading-['160%'];
+}
+
+ul {
+	@apply list-none;
+}
+
+a {
+	@apply text-inherit no-underline;
+}
+
+button {
+	@apply cursor-pointer;
 }
