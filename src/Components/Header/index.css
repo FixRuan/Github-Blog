@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.HeaderContainer {
+	@apply w-full h-[18.5rem] bg-[url('../../assets/Cover.png')] bg-no-repeat 
+	bg-center bg-cover flex items-center justify-center;
+}
