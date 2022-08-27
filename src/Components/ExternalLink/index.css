@@ -4,7 +4,7 @@
 
 .ExternalLink {
 	@apply bg-none text-blue text-sm uppercase 
-	flex items-center gap-[0.5rem] font-bold transition-all 
+	flex items-center gap-[0.5rem] font-bold transition ease-out duration-700 
 	border-b border-transparent h-5 leading-5 hover:border-blue;
 }
 
