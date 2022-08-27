@@ -1,18 +1,21 @@
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { ReactNode } from "react";
 import "./index.css";
 
 interface ExternalLinkProps {
-	href: string;
+	href?: string;
 	text: string;
+	target?: string;
+	icon?: ReactNode;
+	variant?: "iconLeft";
 }
 
-export function ExternalLink({ text, href }: ExternalLinkProps) {
+export function ExternalLink({ text, href, target, icon, variant }: ExternalLinkProps) {
 	return (
-		<a href={href} className="ExternalLink">
+		<a href={href} target={target} className={`ExternalLink ${variant === "iconLeft" && "flex-row-reverse"}`}>
 			{text}
-			<FontAwesomeIcon icon={faUpRightFromSquare} />
+			{icon ?? <FontAwesomeIcon icon={faUpRightFromSquare} />}
 		</a>
 	);
 }
