@@ -6,7 +6,7 @@ import logoImg from "../../assets/Logo.svg";
 export function Header() {
 	return (
 		<div className="HeaderContainer">
-			<img src={logoImg} alt="" />
+			<img src={logoImg} alt="" className="mb-[5rem]" />
 		</div>
 	);
 }

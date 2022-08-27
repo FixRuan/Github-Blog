@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.UserInfo {
+	@apply flex items-center gap-6 flex-wrap mt-auto;
+}
+
+.UserInfo li {
+	@apply flex items-center gap-2;
+}
+
+.UserInfo li svg {
+	@apply w-[1.125rem] h-[1.125rem] text-base-label;
+}

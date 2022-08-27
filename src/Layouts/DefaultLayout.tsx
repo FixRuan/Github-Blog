@@ -7,7 +7,9 @@ export function DefaultLayout() {
 	return (
 		<div className="">
 			<Header />
-			<Outlet />
+			<main className="w-full max-w-[54rem] my-0 mx-auto">
+				<Outlet />
+			</main>
 		</div>
 	);
 }
