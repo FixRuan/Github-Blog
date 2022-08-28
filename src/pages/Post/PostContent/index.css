@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.PostContentContainer {
+	@apply flex flex-col gap-4 py-10 px-8 mb-32;
+}
+
+.PostContentContainer h1,
+h2,
+h3 {
+	@apply text-blue text-2xl font-bold;
+}
+
+.PostContentContainer pre {
+	@apply bg-base-post p-4;
+}
+
+.PostContentContainer pre div {
+	background: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}

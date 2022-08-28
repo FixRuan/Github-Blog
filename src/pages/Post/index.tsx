@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../lib/axios";
 import { IPost } from "../Home";
+import { PostContent } from "./PostContent";
 import { PostHeader } from "./PostHeader";
 
 
@@ -32,6 +33,7 @@ export function Post() {
 	return (
 		<>
 			<PostHeader isLoading={isLoading} postData={postData} />
+			<PostContent content={postData.body} />
 		</>
 	);
 }
