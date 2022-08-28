@@ -14,12 +14,15 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "fortawesome/react-fontawesome",
+    "@hookform/resolvers": "^2.9.7",
     "axios": "^0.27.2",
     "eslint": "^8.23.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-hook-form": "^7.34.2",
+    "react-router-dom": "^6.3.0",
+    "zod": "^3.18.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

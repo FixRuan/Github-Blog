@@ -1,6 +1,7 @@
 /* eslint-disable no-empty */
 
 import React, { useCallback, useEffect, useState } from "react";
+import { Loading } from "../../Components/Loading";
 import { Post } from "../../Components/Post";
 import { api } from "../../lib/axios";
 import { Profile } from "./Profile";
@@ -22,7 +23,7 @@ const username = import.meta.env.VITE_GITHUB_USERNAME;
 const reponame = import.meta.env.VITE_GITHUB_REPONAME;
 
 export function Home() {
-	const [posts, setPosts] = useState<IPost[]>();
+	const [posts, setPosts] = useState<IPost[]>([]);
 	const [isLoading, setIsLoading] = useState(true);
 
 	const getPosts = useCallback(async (query = "") => {
@@ -43,13 +44,15 @@ export function Home() {
 	return (
 		<>
 			<Profile />
-			<SearchInput />
+			<SearchInput postsLength={posts.length} getPosts={getPosts} />
 
-			<section className="w-full grid gap-8 mb-56 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
-				{posts?.map(post => (
-					<Post key={post.number} post={post} />
-				))}
-			</section>
+			{isLoading ? <Loading /> : (
+				<section className="w-full grid gap-8 mb-56 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2">
+					{posts?.map(post => (
+						<Post key={post.number} post={post} />
+					))}
+				</section>
+			)}
 		</>
 	);
 }
