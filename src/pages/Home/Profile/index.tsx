@@ -8,6 +8,8 @@ import "./index.css";
 import { api } from "../../../lib/axios";
 import { Loading } from "../../../Components/Loading";
 
+const username = import.meta.env.VITE_GITHUB_USERNAME;
+
 interface ProfileData {
 	login: string;
 	bio: string;
@@ -27,7 +29,7 @@ export function Profile() {
 	const getProfileData = useCallback(async () => {
 		try {
 			setIsLoading(true);
-			const response = await api.get("/users/fixruan");
+			const response = await api.get(`/users/${username}`);
 			setProfileData(response.data);
 		} finally {
 			setIsLoading(false);
@@ -53,7 +55,7 @@ export function Profile() {
 						<p>{profileData.bio}</p>
 
 						<ul className="UserInfo">
-							<li><FontAwesomeIcon icon={faGithub} /> {profileData.login}</li>
+							<li><FontAwesomeIcon icon={faGithub} />{profileData.login}</li>
 							<li><FontAwesomeIcon icon={faBuilding} />Devlândia</li>
 							<li><FontAwesomeIcon icon={faUserGroup} />{profileData.followers} seguidores</li>
 						</ul>
