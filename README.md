@@ -4,7 +4,7 @@
 ## Stack
 - React
 - React router dom
-- Styled components
+- Tailwind css
 - Axios
 
 ## Aprendizados
